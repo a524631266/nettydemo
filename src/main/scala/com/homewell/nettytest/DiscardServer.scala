@@ -30,7 +30,7 @@ class DiscardServer {
         .childHandler(new ChannelInitializer[SocketChannel] {
         override def initChannel(ch: SocketChannel): Unit = {
           ch.pipeline()
-            .addLast(new DiscardServerHandler)
+            .addLast(new DiscardServerInHandler)
 //            .addLast("")
         }
       }) // 以一个channel管道方式进行事件触发
@@ -58,7 +58,7 @@ class DiscardServer {
 }
 object DiscardServer{
   def main (args: Array[String] ): Unit = {
-    val port = 8080
+    val port = 8081
     val server = new DiscardServer(port)
     server.run()
   }
