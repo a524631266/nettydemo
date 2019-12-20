@@ -5,7 +5,8 @@
   <version>1.0-SNAPSHOT</version>
   <inceptionYear>2008</inceptionYear>
   <properties>
-    <scala.version>2.11.8</scala.version>
+      <scala.version>2.11.8</scala.version>
+      <scalatest.version>2.2.4</scalatest.version>
   </properties>
 
   <repositories>
@@ -14,6 +15,8 @@
       <name>Scala-Tools Maven2 Repository</name>
       <url>http://scala-tools.org/repo-releases</url>
     </repository>
+
+
   </repositories>
 
   <pluginRepositories>
@@ -47,6 +50,13 @@
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
       <version>4.1.42.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_2.11</artifactId>
+      <version>${scalatest.version}</version>
+       <!--<scope>test</scope>-->
     </dependency>
 
   </dependencies>
@@ -90,6 +100,14 @@
           </classpathContainers>
         </configuration>
       </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>6</source>
+                <target>6</target>
+            </configuration>
+        </plugin>
     </plugins>
   </build>
   <reporting>
