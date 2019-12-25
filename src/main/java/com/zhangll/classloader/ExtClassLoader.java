@@ -6,7 +6,7 @@ package com.zhangll.classloader;
 public class ExtClassLoader {
     public static void main(String[] args) throws ClassNotFoundException {
         System.out.println(System.getProperty("java.ext.dirs"));
-        Class<?> aClass = Class.forName("java.lang.String");
+        Class<?> aClass = Class.forName("javax.swing.JSpinner");
         // null
         System.out.println(aClass.getClassLoader());
     }
