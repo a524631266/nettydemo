@@ -6,7 +6,7 @@ package com.zhangll.classloader;
 public class RootClassLoader {
     static {
         // 加载阶段 static不会触发，即不会初始化类
-        System.out.println(" my is RootClass");
+        System.out.println("Root static function my is RootClass");
     }
     public RootClassLoader(){}
     public String welcome(){

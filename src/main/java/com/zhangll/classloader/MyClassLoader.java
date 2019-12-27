@@ -16,10 +16,10 @@ import java.nio.file.Paths;
  * 先找父构造的加载器，再找自身的，是一个深度优先算法
  */
 public class MyClassLoader extends ClassLoader {
-    private final Path DEFAULT_CLASS_DIR = Paths.get("E:", "github", "nettytest","target","classes");
+    public static final Path DEFAULT_CLASS_DIR = Paths.get("E:", "github", "nettytest","target","classes");
     private final  Path classDir;
 
-    MyClassLoader(){
+    public MyClassLoader(){
         super();
         this.classDir = DEFAULT_CLASS_DIR;
     }
@@ -70,6 +70,7 @@ public class MyClassLoader extends ClassLoader {
     }
 
     public static void main(String[] args) {
+        // 跳过AppClassLoader
         MyClassLoader myClassLoader = new MyClassLoader(Paths.get("E:", "github", "nettytest","target","classes").toString(),MyClassLoader.class.getClassLoader().getParent());
         try {
 
