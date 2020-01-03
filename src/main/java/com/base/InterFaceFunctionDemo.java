@@ -17,5 +17,6 @@ public class InterFaceFunctionDemo {
 //            add("abc");
 //            add("cde");
 //        }}).forEach(functionA);
+
     }
 }
