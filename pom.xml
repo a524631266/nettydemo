@@ -86,6 +86,15 @@
       <artifactId>livy-client-http</artifactId>
       <version>0.6.0-incubating</version>
     </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.esotericsoftware.kryo/kryo -->
+    <dependency>
+      <groupId>com.esotericsoftware.kryo</groupId>
+      <artifactId>kryo</artifactId>
+      <version>2.22</version>
+    </dependency>
+
   </dependencies>
 
   <build>
