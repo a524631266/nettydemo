@@ -18,7 +18,7 @@ public class SerializerWriteObjectAndClass {
         ByteBuffer byteBuffer = stream.getByteBuffer();
 
         int instream ;
-        Input input = new Input(byteBuffer);
+//        Input input = new Input(byteBuffer);
 
     }
 }
